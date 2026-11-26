@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 16</title>
+    <link rel="stylesheet" href="mystyle.css">
+    <style>
+        body{
+            background-color: lightcyan;
+        }
+        .jog {
+            position: fixed;
+            top: 20%;
+            width: 40%;
+            left: 5%;
+            
+        }
+        .resp {
+            position: fixed;
+            top: 20%;
+            left: 55%;
+            width: 40%;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Aula 16 - Soma 10</h1>
+    </header>
+    <nav></nav>
+    <main>
+        <!-- Jogo Soma 10-->
+         
+        <div class="jog">
+            <h3> <u>Jogo soma 10</u></h3>
+            <p>O objetivo do jogo é preencher a tabela com os números de 1 a 9, de forma que a soma de cada linha, coluna e quadrante seja igual a 10. </p>
+            <form action="">
+            <table>
+                <tr>
+
+                    <td><input type="text" name="a1" id="1" size="3"> </td>
+                    <td><input type="text" name="a2" id="2" size="3"> </td>
+                    <td><input type="text" name="a3" id="3" size="3"> </td>
+                    <td><input type="text" name="a4" id="4" size="3"> </td>
+                </tr>
+                <tr>
+
+                    <td><input type="text" name="b5" id="5" size="3"> </td>
+                    <td><input type="text" name="b6" id="6" size="3"> </td>
+                    <td><input type="text" name="b7" id="7" size="3"> </td>
+                    <td><input type="text" name="b8" id="8" size="3"> </td>
+
+                </tr>
+                <tr>
+
+                    <td><input type="text" name="c9" id="9" size="3"> </td>
+                    <td><input type="text" name="c10" id="10" size="3"> </td>
+                    <td><input type="text" name="c11" id="11" size="3"> </td>
+                    <td><input type="text" name="c12" id="12" size="3"> </td>
+                </tr>
+                <tr>
+                    
+                    <td><input type="text" name="d13" id="13" size="3"> </td>
+                    <td><input type="text" name="d14" id="14" size="3"> </td>
+                    <td><input type="text" name="d15" id="15" size="3"> </td>
+                    <td><input type="text" name="d16" id="16" size="3"> </td>
+                </tr>
+                <tr>
+                    <td><input type="reset" value="Limpar"> </td>
+                    <td></td>
+                    <td><button type="button" onclick="jogo()">Enviar</button> </td>
+                </tr>                                                  
+            </table>
+
+        </form>
+        </div>
+        <div id="resp" class="resp"></div>
+    </main>
+
+    <footer></footer>
+ <script>    /*Jogo soma 10 4 x 4*/
+    function jogo() {
+        let a1 = parseInt(document.getElementById("1").value);
+        let a2 = parseInt(document.getElementById("2").value);
+        let a3 = parseInt(document.getElementById("3").value);
+        let a4 = parseInt(document.getElementById("4").value);
+
+        let b5 = parseInt(document.getElementById("5").value);
+        let b6 = parseInt(document.getElementById("6").value);
+        let b7 = parseInt(document.getElementById("7").value);
+        let b8 = parseInt(document.getElementById("8").value);
+
+        let c9 = parseInt(document.getElementById("9").value);
+        let c10 = parseInt(document.getElementById("10").value);
+        let c11 = parseInt(document.getElementById("11").value);
+        let c12 = parseInt(document.getElementById("12").value);
+
+        let d13 = parseInt(document.getElementById("13").value);
+        let d14 = parseInt(document.getElementById("14").value);
+        let d15 = parseInt(document.getElementById("15").value);
+        let d16 = parseInt(document.getElementById("16").value);
+
+        /*
+        a1 a2 a3 a4
+        b5 b6 b7 b8
+        c9 c10 c11 c12
+        d13 d14 d15 d16
+        */
+
+        /*Linhas*/
+        let erro = 0;
+        let l1 = a1 + a2 + a3 + a4;
+        let l2 = b5 + b6 + b7 + b8;
+        let l3 = c9 + c10 + c11 + c12;
+        let l4 = d13 + d14 + d15 + d16;
+
+        /*Colunas*/
+        let cl1 = a1 + b5 + c9 + d13;
+        let cl2 = a2 + b6 + c10 + d14;
+        let cl3 = a3 + b7 + c11 + d15;
+        let cl4 = a4 + b8 + c12 + d16;
+        
+        /*Quadrantes*/
+        let q1 = a1 + a2 + b5 + b6;
+        let q2 = a3 + a4 + b7 + b8;
+        let q3 = c9 + c10 + d13 + d14;
+        let q4 = c11 + c12 + d15 + d16;
+
+
+        if (l1 == 10) {
+            l1 = "Linha 1 CORRETA";
+        } else {
+            l1 = "Linha 1 ERRADA";
+            erro = erro + 1;
+        }if (l2 == 10) {
+            l2 = "Linha 2 CORRETA";
+        } else {
+            l2 = "Linha 2 ERRADA";
+            erro = erro + 1;
+        }if (l3 == 10) {
+            l3 = "Linha 3 CORRETA";
+        } else {
+            l3 = "Linha 3 ERRADA";
+            erro = erro + 1;
+        }if (l4 == 10) {
+            l4 = "Linha 4 CORRETA";
+        } else {
+            l4 = "Linha 4 ERRADA";
+            erro = erro + 1;
+        }
+        /*Colunas*/
+        if (cl1 == 10) {
+            cl1 = "Coluna 1 CORRETA";
+        } else {
+            cl1 = "Coluna 1 ERRADA";
+            erro = erro + 1;
+        }if (cl2 == 10) {
+            cl2 = "Coluna 2 CORRETA";
+        } else {
+            cl2 = "Coluna 2 ERRADA";
+            erro = erro + 1;
+        }if (cl3 == 10) {
+            cl3 = "Coluna 3 CORRETA";
+        } else {
+            cl3 = "Coluna 3 ERRADA";
+            erro = erro + 1;
+        }if (cl4 == 10) {
+            cl4 = "Coluna 4 CORRETA";
+        } else {
+            cl4 = "Coluna 4 ERRADA";
+            erro = erro + 1;
+        }
+        /*quadrantes*/
+        if (q1 == 10) {
+            q1 = "Quadrante 1 CORRETA";
+        } else {
+            q1 = "Quadrante 1 ERRADA";
+            erro = erro + 1;
+        }if (q2 == 10) {
+            q2 = "Quadrante 2 CORRETA";
+        } else {
+            q2 = "Quadrante 2 ERRADA";
+            erro = erro + 1;
+        }if (q3 == 10) {
+            q3 = "Quadrante 3 CORRETA";
+        } else {
+            q3 = "Quadrante 3 ERRADA";
+            erro = erro + 1;
+        }if (q4 == 10) {
+            q4 = "Quadrante 4 CORRETA";
+        } else {
+            q4 = "Quadrante 4 ERRADA";
+            erro = erro + 1;
+        }
+        let nr = "";
+        if(a1 == d16){
+            nr = "Número repetido";
+            erro = erro + 1;
+        }
+        if(erro == 0){
+            nr = "Parabéns nenhum erro, você acertou!";
+
+        }else{
+           erro = "Tente novamente!";
+        }
+
+        document.getElementById("resp").innerHTML = `
+        <p>${l1}</p>
+        <p>${l2}</p>
+        <p>${l3}</p>
+        <p>${l4}</p>
+        <p>${cl1}</p>
+        <p>${cl2}</p>
+        <p>${cl3}</p>
+        <p>${cl4}</p>
+        <p>${q1}</p>
+        <p>${q2}</p>
+        <p>${q3}</p>
+        <p>${q4}</p>
+        <p>${nr}</p>
+        <p>${erro}</p>
+        `;
+
+    }
+</script>
+</body>
+</html>
+
+
+<!-- Soma 15-->

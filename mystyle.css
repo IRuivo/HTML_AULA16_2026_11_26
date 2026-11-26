@@ -1,0 +1,186 @@
+body{
+    background-color:gray;
+}
+
+header{
+    position: fixed;
+    height: 10%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+nav{
+    position: fixed;
+    height: 30%;
+    width: 100%;
+    top: 10%;
+    left: 0;
+    text-align: center;
+    color: darkmagenta;
+}
+
+main{
+    position: fixed;
+    height: 70%;
+    width: 100%;
+    top: 10%;
+    left: 0%;
+    text-align: center;
+    padding-left: 0%;
+    overflow: auto;
+    font-size: medium;
+}
+
+footer{
+    position: fixed;
+    height: 10%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    overflow: auto;
+}
+
+.azul{
+    color: blue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.verd{
+    color: green;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.verm{
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.lara{
+    color: orange;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.roman{
+    list-style: upper-roman;
+
+}
+.fonte{
+        font-size: 200%;
+    }
+.bwhit{
+    background-color: white;
+}
+@keyframes rgb {
+    0%   { color: #8A2BE2; }
+    1%   { color: #7B2BE2; }
+    2%   { color: #6C2BE2; }
+    3%   { color: #5D2BE2; }
+    4%   { color: #4E2BE2; }
+    5%   { color: #3F2BE2; }
+    6%   { color: #302BE2; }
+    7%   { color: #2B3DE2; }
+    8%   { color: #2B4CE2; }
+    9%   { color: #2B5BE2; }
+    10%  { color: #2B6AE2; }
+    11%  { color: #2B79E2; }
+    12%  { color: #2B88E2; }
+    13%  { color: #2B97E2; }
+    14%  { color: #2BA6E2; }
+    15%  { color: #2BB5E2; }
+    16%  { color: #2BC4E2; }
+    17%  { color: #2BD3E2; }
+    18%  { color: #2BE2D8; }
+    19%  { color: #2BE2C9; }
+    20%  { color: #2BE2BA; }
+    21%  { color: #2BE2AB; }
+    22%  { color: #2BE29C; }
+    23%  { color: #2BE28D; }
+    24%  { color: #2BE27E; }
+    25%  { color: #2BE26F; }
+    26%  { color: #2BE260; }
+    27%  { color: #2BE251; }
+    28%  { color: #2BE242; }
+    29%  { color: #2BE233; }
+    30%  { color: #2BE224; }
+    31%  { color: #38E22B; }
+    32%  { color: #47E22B; }
+    33%  { color: #56E22B; }
+    34%  { color: #65E22B; }
+    35%  { color: #74E22B; }
+    36%  { color: #83E22B; }
+    37%  { color: #92E22B; }
+    38%  { color: #A1E22B; }
+    39%  { color: #B0E22B; }
+    40%  { color: #BFE22B; }
+    41%  { color: #CEE22B; }
+    42%  { color: #DDE22B; }
+    43%  { color: #E2D52B; }
+    44%  { color: #E2C62B; }
+    45%  { color: #E2B72B; }
+    46%  { color: #E2A82B; }
+    47%  { color: #E2992B; }
+    48%  { color: #E28A2B; }
+    49%  { color: #E27B2B; }
+    50%  { color: #E26C2B; }
+    51%  { color: #E25D2B; }
+    52%  { color: #E24E2B; }
+    53%  { color: #E23F2B; }
+    54%  { color: #E2302B; }
+    55%  { color: #E22B38; }
+    56%  { color: #E22B47; }
+    57%  { color: #E22B56; }
+    58%  { color: #E22B65; }
+    59%  { color: #E22B74; }
+    60%  { color: #E22B83; }
+    61%  { color: #E22B92; }
+    62%  { color: #E22BA1; }
+    63%  { color: #E22BB0; }
+    64%  { color: #E22BBF; }
+    65%  { color: #E22BCE; }
+    66%  { color: #DDE22B; }
+    67%  { color: #C4E22B; }
+    68%  { color: #ABE22B; }
+    69%  { color: #92E22B; }
+    70%  { color: #79E22B; }
+    71%  { color: #60E22B; }
+    72%  { color: #47E22B; }
+    73%  { color: #2BE238; }
+    74%  { color: #2BE251; }
+    75%  { color: #2BE26A; }
+    76%  { color: #2BE283; }
+    77%  { color: #2BE29C; }
+    78%  { color: #2BE2B5; }
+    79%  { color: #2BE2CE; }
+    80%  { color: #2BC4E2; }
+    81%  { color: #2BA6E2; }
+    82%  { color: #2B88E2; }
+    83%  { color: #2B6AE2; }
+    84%  { color: #2B4CE2; }
+    85%  { color: #3F2BE2; }
+    86%  { color: #5D2BE2; }
+    87%  { color: #7B2BE2; }
+    88%  { color: #992BE2; }
+    89%  { color: #B72BE2; }
+    90%  { color: #D52BE2; }
+    91%  { color: #E22BD5; }
+    92%  { color: #E22BB7; }
+    93%  { color: #E22B99; }
+    94%  { color: #E22B7B; }
+    95%  { color: #E22B5D; }
+    96%  { color: #E22B3F; }
+    97%  { color: #E22B30; }
+    98%  { color: #D52B2B; }
+    99%  { color: #AD2B2B; }
+    100% { color: #8A2BE2; }
+}
+.rgb{
+    animation: rgb 30s infinite;
+}
+.bgray{
+    background-color: gray;
+}
+.txt{
+    font-size: x-large;
+}

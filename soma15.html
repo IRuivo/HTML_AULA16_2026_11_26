@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 15</title>
+    <link rel="stylesheet" href="mystyle.css">
+    <style>
+        body{
+            background-color: lightcyan;
+        }
+        .jog {
+            position: fixed;
+            top: 20%;
+            width: 40%;
+            left: 5%;
+            
+        }
+        .resp {
+            position: fixed;
+            top: 20%;
+            left: 55%;
+            width: 40%;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Aula 15 - Soma 15</h1>
+    </header>
+    <nav></nav>
+    <main>
+        <!-- Jogo Soma 15-->
+         
+        <div class="jog">
+            <h3> <u>Jogo soma 15</u></h3>
+            <p>O objetivo do jogo é preencher a tabela com os números de 1 a 9, de forma que a soma de cada linha, coluna e diagonal seja igual a 15. </p>
+            <form action="">
+            <table>
+                <tr>
+
+                    <td><input type="text" name="a1" id="1" size="3"> </td>
+                    <td><input type="text" name="a2" id="2" size="3"> </td>
+                    <td><input type="text" name="a3" id="3" size="3"> </td>
+                </tr>
+                <tr>
+
+                    <td><input type="text" name="b4" id="4" size="3"> </td>
+                    <td><input type="text" name="b5" id="5" size="3"> </td>
+                    <td><input type="text" name="b6" id="6" size="3"> </td>
+                </tr>
+                <tr>
+
+                    <td><input type="text" name="c7" id="7" size="3"> </td>
+                    <td><input type="text" name="c8" id="8" size="3"> </td>
+                    <td><input type="text" name="c9" id="9" size="3"> </td>
+                </tr>
+                <tr>
+                    <td><input type="reset" value="Limpar"> </td>
+                    <td></td>
+                    <td><button type="button" onclick="jogo()">Enviar</button> </td>
+                    <td></td>
+
+                </tr>                                                  
+            </table>
+
+        </form>
+        </div>
+        <div id="resp" class="resp"></div>
+    </main>
+
+    <footer></footer>
+ <script>
+    function jogo() {
+        let a1 = parseInt(document.getElementById("1").value);
+        let a2 = parseInt(document.getElementById("2").value);
+        let a3 = parseInt(document.getElementById("3").value);
+
+        let b4 = parseInt(document.getElementById("4").value);
+        let b5 = parseInt(document.getElementById("5").value);
+        let b6 = parseInt(document.getElementById("6").value);
+        
+        let c7 = parseInt(document.getElementById("7").value);
+        let c8 = parseInt(document.getElementById("8").value);
+        let c9 = parseInt(document.getElementById("9").value);
+
+        let erro = 0;
+        let l1 = a1 + a2 + a3;
+        let l2 = b4 + b5 + b6;
+        let l3 = c7 + c8 + c9;
+        let cl1 = a1 + b4 + c7;
+        let cl2 = a2 + b5 + c8;
+        let cl3 = a3 + b6 + c9;
+        let d1 = a1 + b5 + c9;
+        let d2 = a3 + b5 + c7;
+
+
+        if (l1 == 15) {
+            l1 = "Linha 1 CORRETA";
+        } else {
+            l1 = "Linha 1 ERRADA";
+            erro = erro + 1;
+        }if (l2 == 15) {
+            l2 = "Linha 2 CORRETA";
+        } else {
+            l2 = "Linha 2 ERRADA";
+            erro = erro + 1;
+        }if (l3 == 15) {
+            l3 = "Linha 3 CORRETA";
+        } else {
+            l3 = "Linha 3 ERRADA";
+            erro = erro + 1;
+        }if (cl1 == 15) {
+            cl1 = "Coluna 1 CORRETA";
+        } else {
+            cl1 = "Coluna 1 ERRADA";
+            erro = erro + 1;
+        }if (cl2 == 15) {
+            cl2 = "Coluna 2 CORRETA";
+        } else {
+            cl2 = "Coluna 2 ERRADA";
+            erro = erro + 1;
+        }if (cl3 == 15) {
+            cl3 = "Coluna 3 CORRETA";
+        } else {
+            cl3 = "Coluna 3 ERRADA";
+            erro = erro + 1;
+        }if (d1 == 15) {
+            d1 = "Diagonal Ascendente 1 CORRETA";
+        } else {
+            d1 = "Diagonal Ascendente 1 ERRADA";
+            erro = erro + 1;
+        }if (d2 == 15) {
+            d2 = "Diagonal Descendente 2 CORRETA";
+        } else {
+            d2 = "Diagonal Descendente 2 ERRADA";
+            erro = erro + 1;
+        }
+        let nr = "";
+        if(a1 == c9){
+            nr = "Número repetido";
+            erro = erro + 1;
+        }
+        if(erro == 0){
+            nr = "Parabéns nenhum erro, você acertou!" + '<a href="Aula_16.html"> <button  type="button"> Próximo nível</button></a>';
+
+        }else{
+           erro = "Tente novamente!";
+        }
+
+
+        document.getElementById("resp").innerHTML = `
+        <p>${l1}</p>
+        <p>${l2}</p>
+        <p>${l3}</p>
+        <p>${cl1}</p>
+        <p>${cl2}</p>
+        <p>${cl3}</p>
+        <p>${d1}</p>
+        <p>${d2}</p>
+        <p>${nr}</p>
+        <p>${erro}</p>
+        `;
+
+    }
+</script>
+</body>
+</html>
+
+
+<!-- Soma 15-->
